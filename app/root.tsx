@@ -8,6 +8,7 @@ export default function App() {
       </head>
       <body>
         <h1>Hello World!</h1>
+        <h1>For git commit message</h1>
         {process.env.NODE_ENV === 'development' ? <LiveReload/> : null}
       </body>
     </html>
