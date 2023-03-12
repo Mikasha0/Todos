@@ -34,7 +34,7 @@ export default function todosRoute() {
                 <Link to="some-joke-id">Hippo</Link>
               </li>
             </ul>
-            <Link to="new" className="button">
+            <Link to="newTodo" className="button">
               Add your own
             </Link>
           </div>
