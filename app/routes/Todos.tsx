@@ -43,7 +43,9 @@ export default function TodosRoute() {
             <p>Here are a few more todos to check out:</p>
             <ul>
       {data.todos.map((todo) => (
-        <li key={todo.id}>{todo.title}</li>
+        <li key={todo.id}>
+          <Link to={todo.id}>{todo.title}</Link>
+        </li>
       ))}
     </ul>
             <Link to="newTodo" className="button">
