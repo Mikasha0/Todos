@@ -1,10 +1,9 @@
 export default function TodosIndexRoute() {
     return (
       <div>
-        <p>Here's a random joke:</p>
+        <p>The First Todo Ever</p>
         <p>
-          I was wondering why the frisbee was getting bigger,
-          then it hit me.
+          Working to Make the ToDoList App.
         </p>
       </div>
     );
