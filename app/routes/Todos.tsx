@@ -1,13 +1,25 @@
 import type { LinksFunction } from "@remix-run/node";
 import { Outlet, Link } from "@remix-run/react";
-
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import stylesUrl from "~/styles/todos.css";
+import { db } from "~/utils/db.server";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: stylesUrl }];
 };
 
-export default function todosRoute() {
+export const loader = async () => {
+  return json({
+    todos: await db.todo.findMany({take: 5,
+      select: { id: true, title: true },
+      orderBy: { title: "asc" },}),
+  });
+};
+
+export default function TodosRoute() {
+  const data = useLoaderData<typeof loader>();
+
   return (
     <div className="todos-layout">
       <header className="todos-header">
