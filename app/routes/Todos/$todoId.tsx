@@ -1,4 +1,4 @@
-export default function JokeRoute() {
+export default function TodoRoute() {
     return (
       <div>
         <p>This is our parameterized route:</p>
