@@ -42,10 +42,10 @@ export default function TodosRoute() {
             <Link to=".">Get a random todo</Link>
             <p>Here are a few more todos to check out:</p>
             <ul>
-              <li>
-                <Link to="some-joke-id">Hippo</Link>
-              </li>
-            </ul>
+      {data.todos.map((todo) => (
+        <li key={todo.id}>{todo.title}</li>
+      ))}
+    </ul>
             <Link to="newTodo" className="button">
               Add your own
             </Link>
