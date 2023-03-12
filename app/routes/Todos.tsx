@@ -7,16 +7,16 @@ export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: stylesUrl }];
 };
 
-export default function JokesRoute() {
+export default function todosRoute() {
   return (
-    <div className="jokes-layout">
-      <header className="jokes-header">
+    <div className="todos-layout">
+      <header className="todos-header">
         <div className="container">
           <h1 className="home-link">
             <Link
               to="/"
-              title="Remix Jokes"
-              aria-label="Remix Jokes"
+              title="Remix todos"
+              aria-label="Remix todos"
             >
               <span className="logo">🤪</span>
               <span className="logo-medium">T🤪D🤪S</span>
@@ -24,11 +24,11 @@ export default function JokesRoute() {
           </h1>
         </div>
       </header>
-      <main className="jokes-main">
+      <main className="todos-main">
         <div className="container">
-          <div className="jokes-list">
-            <Link to=".">Get a random joke</Link>
-            <p>Here are a few more jokes to check out:</p>
+          <div className="todos-list">
+            <Link to=".">Get a random todo</Link>
+            <p>Here are a few more todos to check out:</p>
             <ul>
               <li>
                 <Link to="some-joke-id">Hippo</Link>
@@ -38,7 +38,7 @@ export default function JokesRoute() {
               Add your own
             </Link>
           </div>
-          <div className="jokes-outlet">
+          <div className="todos-outlet">
             <Outlet />
           </div>
         </div>
