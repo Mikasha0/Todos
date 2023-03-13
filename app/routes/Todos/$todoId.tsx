@@ -19,7 +19,7 @@ export default function JokeRoute() {
 
   return (
     <div>
-      <p>Here's your hilarious joke:</p>
+      <p>Here's your todo:</p>
       <p>{data.todo.todos}</p>
       <Link to=".">{data.todo.title} Permalink</Link>
     </div>
