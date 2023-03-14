@@ -45,6 +45,7 @@ export default function TodosRoute() {
       {data.todos.map((todo) => (
         <li key={todo.id}>
           <Link to={todo.id}>{todo.title}</Link>
+          <button>delete</button>
         </li>
       ))}
     </ul>
